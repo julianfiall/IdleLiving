@@ -19,3 +19,9 @@ function work() {
     document.getElementById('bankbal').innerHTML = bank;
     localStorage.setItem(bank);
 }
+function changelog() {
+    document.getElementById("changelog-modal-js").style.display = "block";
+}
+function closeChangelog() {
+    document.getElementById("changelog-modal-js").style.display = "none";
+}

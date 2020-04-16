@@ -13,18 +13,39 @@
         <div class="webnav">
             <div class="nav w3-bar">
                 <button id="title" class="navbutton w3-bar-item">Idle Living</button>
-                <button class="navbutton w3-bar-item" onclick="">Changelog</button>
-                <button class="navbutton w3-bar-item" onclick="">FAQ</button>
+                <button class="navbutton w3-bar-item" onclick="changelog()">Changelog</button>
+                <button class="navbutton w3-bar-item" style="display:none;" onclick="">FAQ</button>
                 <button class="navbutton w3-bar-item" onclick="">Help</button>
                 <button class="navbutton w3-bar-item" onclick="">Suggestions</button>
+            </div>
+        </div>
+        <div id="changelog-modal-js" class="changelog-modal">
+            <div class="changelog">
+                <button class="close-button" onclick="closeChangelog()">&times;</button>
+                <p class="subtitle">Changelog</p>
+                <p>
+                    <b>
+                        Version 1.0.1 <span class="transparent">April 16, 2020</span>
+                    </b><br>
+                    <ul>
+                        <li>Added localStorage</li>
+                        <li>Changed font sizes, more legible</li>
+                        <li>Uploaded to Github</li>
+                    </ul>
+                    <b>
+                        Version 1.0 <span class="transparent">April 12, 2020</span>
+                    </b><br>
+                    <ul>
+                        <li>Demo released, uploaded a few days later</li>
+                    </ul>
+                </p>
             </div>
         </div>
         <div class="web-body">
             <div class="singlecell w3-quarter w3-mobile">
                 <div class="singlecategory">
                     <p class="subtitle">You</p>
-                    <hr style="margin:0px;">
-                    <div class="money-container">
+                    <div class="cat-container">
                         <p id="bankbal"></p>
                     </div>
                 </div>
@@ -32,23 +53,23 @@
             <div class="singlecell w3-quarter w3-mobile">
                 <div class="singlecategory">
                     <p class="subtitle">Income</p>
-                    <hr style="margin:0px;">
-                    <button onclick="work()">Go to work.</button>
+                    <div class="cat-container">
+                        <button onclick="work()" class="interactive-button">Go to work.</button><br>
+                        <button onclick="work()" class="interactive-button">Go to work.</button>
+                    </div>
                 </div>
             </div>
             <div class="singlecell w3-quarter w3-mobile">
                 <div class="singlecategory">
                     <p class="subtitle">Manage</p>
-                    <hr style="margin:0px;">
                 </div>
             </div>
             <div class="singlecell w3-quarter w3-mobile">
                 <div class="singlecategory">
                     <p class="subtitle">Shop</p>
-                    <hr style="margin:0px;">
                 </div>
             </div>
-            <footer class="w3-display-bottommiddle">made by fianimat <span class="version">1.0</span></footer>
+            <footer class="w3-display-bottommiddle">made by <a href="https://julianfiall.github.io">Julian Fiallo</a><span class="version">1.0</span></footer>
         </div>
     </body>
 </html>
